@@ -28,5 +28,6 @@ environment:
 on_success:
 - git config --global user.email "peterfirsoff@gmail.com"
 - git config --global user.name "petr-firsov"
+- git add -A
 - git commit -m 'Done'
 - git push
