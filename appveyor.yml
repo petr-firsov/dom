@@ -21,3 +21,10 @@ test_script:
 
 deploy_script:  # скрипт развёртывания
 
+environment:
+  access_token:
+    secure: wNQb7WgB8TuQgQZ75MR7IRSaBGffiuOWCNe1UXURMvV+yabJD8YzVHS/xhwCXela
+
+on_success:
+- git commit ...
+- git push ...
