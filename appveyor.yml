@@ -26,5 +26,7 @@ environment:
     secure: wNQb7WgB8TuQgQZ75MR7IRSaBGffiuOWCNe1UXURMvV+yabJD8YzVHS/xhwCXela
 
 on_success:
+- git config --global user.email "peterfirsoff@gmail.com"
+- git config --global user.name "petr-firsov"
 - git commit -m 'Done'
 - git push
