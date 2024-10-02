@@ -20,14 +20,8 @@ test_script:
   - npm run lint && npm test  # скрипт тестирования
 
 deploy_script:  # скрипт развёртывания
-
-environment:
-  access_token:
-    secure: wNQb7WgB8TuQgQZ75MR7IRSaBGffiuOWCNe1UXURMvV+yabJD8YzVHS/xhwCXela
-
-on_success:
-- git config --global user.email "peterfirsoff@gmail.com"
+- git config --global credential.helper store
 - git config --global user.name "petr-firsov"
-- git add -A
-- git commit -m 'Done'
-- git push
+- git config --global user.email "peterfirsoff@gmail.com"
+- echo "https://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:x-oauth-basic@github.com" > "$HOME/.git-credentials"
+- npx gh-pages -d dist -u "appveyor-bot <ci@appveyor>" 
