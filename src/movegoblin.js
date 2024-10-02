@@ -1,5 +1,4 @@
 import {tiles} from './tiles';
-import image from './images/goblin.png';
 export function moveGoblin() {
     let goblin = document.querySelector('.goblin');
     let goblinParent = goblin.parentElement;
@@ -9,6 +8,6 @@ export function moveGoblin() {
         nextTile = (Math.ceil(Math.random() * 15));
     }
     goblin.remove();
-    tiles[nextTile].insertAdjacentHTML('beforeend', `<img src="${image}" width=100 height=100 class="goblin">`);
+    tiles[nextTile].insertAdjacentHTML('beforeend', '<img src="./images/goblin.png" width=100 height=100 class="goblin">');
 }
 
